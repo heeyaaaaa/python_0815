@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d7cada2-c0f8-4d9d-8880-90532579915c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Wamnc0zHEaeoFruOL89rLGmrTv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day02/04_wordcloud" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02\04_wordcloud" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02\03_text_preprocessing" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02\02_regex" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day01\04_api" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day01\02_scraping" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02\03_text_preprocessing" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02" />
+      <recent name="C:\Users\hyunh\OneDrive\강의\2.러닝스푼즈\포스코\1기수\강의자료\최종본\code\day02\recommendation\dataset" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.ex02">
+    <configuration name="01 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day02/09_word2vec" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day02/09_word2vec/01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day02/07_recommendation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day02/07_recommendation/01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day02/07_recommendation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day02/07_recommendation/03.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day02/07_recommendation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day02/07_recommendation/04.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day01/02_scraping" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day01/02_scraping/ex02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ex02" />
+        <item itemvalue="Python.01 (1)" />
+        <item itemvalue="Python.04 (1)" />
+        <item itemvalue="Python.03" />
+        <item itemvalue="Python.01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d7cada2-c0f8-4d9d-8880-90532579915c" name="Default Changelist" comment="" />
+      <created>1579396247472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579396247472</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="947" y="244" key="#Vim_Emulation" timestamp="1580126263101">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="947" y="244" key="#Vim_Emulation/0.0.1805.1163@0.0.1805.1163" timestamp="1580126263101" />
+    <state x="1034" y="324" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580125781309">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="1034" y="324" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1805.1163@0.0.1805.1163" timestamp="1580125781309" />
+    <state width="1784" height="415" key="GridCell.Tab.0.bottom" timestamp="1580395814060">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state width="1784" height="415" key="GridCell.Tab.0.bottom/0.0.1805.1163@0.0.1805.1163" timestamp="1580395814060" />
+    <state width="1784" height="415" key="GridCell.Tab.0.center" timestamp="1580395814060">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state width="1784" height="415" key="GridCell.Tab.0.center/0.0.1805.1163@0.0.1805.1163" timestamp="1580395814060" />
+    <state width="1784" height="415" key="GridCell.Tab.0.left" timestamp="1580395814060">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state width="1784" height="415" key="GridCell.Tab.0.left/0.0.1805.1163@0.0.1805.1163" timestamp="1580395814060" />
+    <state width="1784" height="415" key="GridCell.Tab.0.right" timestamp="1580395814060">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state width="1784" height="415" key="GridCell.Tab.0.right/0.0.1805.1163@0.0.1805.1163" timestamp="1580395814060" />
+    <state x="615" y="233" key="SettingsEditor" timestamp="1580383813234">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="615" y="233" key="SettingsEditor/0.0.1805.1163@0.0.1805.1163" timestamp="1580383813234" />
+    <state x="1057" y="410" key="com.intellij.ide.util.TipDialog" timestamp="1580125857795">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="1057" y="410" key="com.intellij.ide.util.TipDialog/0.0.1805.1163@0.0.1805.1163" timestamp="1580125857795" />
+    <state x="445" y="201" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580220387832">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="445" y="201" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1805.1163@0.0.1805.1163" timestamp="1580220387832" />
+    <state x="1017" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1580344914956">
+      <screen x="0" y="0" width="1805" height="1163" />
+    </state>
+    <state x="1017" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1805.1163@0.0.1805.1163" timestamp="1580344914956" />
+  </component>
+</project>
