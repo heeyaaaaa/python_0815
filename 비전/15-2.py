@@ -7,6 +7,7 @@ def pyramid():
     
     win_titles = ['org', 'level1', 'level2', 'level3']
     g_down = []
+    g_up = []
     g_down.append(tmp)
     
     for i in range(3):
@@ -14,10 +15,18 @@ def pyramid():
         g_down.append(tmp1)
         tmp = tmp1
         
-    for i in range(4):
-        cv2.imshow(win_titles[i], g_down[i])
+    cv2.imshow('level3', tmp)
+    
+    for i in range(3):
+        tmp = g_down[i+1]
+        tmp1 = cv2.pyrUp(tmp)
+        g_up.append(tmp1)
+    
+    for i in range(3):
+        cv2.imshow(win_titles[i], g_up[i])
         
     cv2.waitKey(0)
     cv2.destroyAllWindows()
     
 pyramid()
+
