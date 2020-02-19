@@ -25,6 +25,7 @@ def convex():
     [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
     ly = int((-x*vy/vx) + y)
     ry = int(((cols-x)*vy/vx) + y)
+    print(vx, vy, x, y)
 
     cv2.line(img, (cols-1,ry), (0, ly), (0,0,255), 2)   
 

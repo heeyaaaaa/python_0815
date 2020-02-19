@@ -14,8 +14,10 @@ def contour():
     cnt = contours[0]
     cv2.drawContours(img, [cnt], 0, (255,255,0), 1)
     
-    epsilon1 = 0.01*cv2.arcLength(cnt, True)
+    epsilon1 = 0.8*cv2.arcLength(cnt, True)
     epsilon2 = 0.1*cv2.arcLength(cnt, True)
+    
+    print(epsilon1)
     
     approx1 = cv2.approxPolyDP(cnt, epsilon1, True)
     approx2 = cv2.approxPolyDP(cnt, epsilon2, True)
