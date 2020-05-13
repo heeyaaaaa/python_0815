@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="../static/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../static/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
+    <style>
+      .prod_li >img{
+      	
+        width: 100%;
+        height: 100%;
+     
+      }
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color: #8ebf42;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 40%;
+      padding: 20px;
+      }
+      fieldset {
+      border: none;
+      border-top: 1px solid #8ebf42;
+      }
+      .account-details, .personal-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .personal-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .personal-details >div, input, label {
+      width: 600%;
+      }
+      <!-- -->
+      .account-details, .product-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .product-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .product-details, input, label {
+      width:100%;
+      }
+      
+      <!-- -->
+      label {
+      padding: 0 0px;
+      text-align: middle;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(100% + 26px);
+      padding: 15px 0;
+      }
+      select {
+      background: transparent;
+      }
+      .gender input {
+      width: auto;
+      } 
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .birthdate select.day {
+      width: 100%;
+      }
+      .birthdate select.mounth {
+      width: calc(100% - 94px);
+      }
+      .birthdate input {
+      width: 38px;
+      vertical-align: unset;
+      }
+      .checkbox input, .children input {
+      width: auto;
+      margin: -2px 10px 0 0;
+      }
+      .checkbox a {
+      color: #8ebf42;
+      }
+      .checkbox a:hover {
+      color: #82b534;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #8ebf42; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #82b534;
+      }
+      @media (min-width: 568px) {
+      .account-details >div, .personal-details >div {
+      width: 100%;
+      }
+      label {
+      width: 70%;
+      }
+      input {
+      width: 60%;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(60% + 16px);
+      }
+      
+      }
+    </style>
+    <script language='javascript'>
+    
+	 function gender_chk() {
+	        //라디오 버튼 Name 가져오기
+	        var radio_btn = document.getElementsByName("gender");
+	 
+	        //라디오 버튼이 체크되었나 확인하기 위한 변수
+	        var radio_btn_check = 0;
+	        for(var i = 0; i<radio_btn.length; i++){
+	            //만약 라디오 버튼이 체크가 되어있다면 true
+	            if(radio_btn[i].checked==true){
+	                //라디오 버튼 값
+	                //alert(radio_btn[i].value);
+	                var gender=radio_btn[i].value;
+	                //라디오 버튼이 체크되면 radio_btn_check를 1로 만들어준다.
+	                radio_btn_check++;
+	            }
+	        }
+	        
+	        if(radio_btn_check==0){
+	            alert("라디오 버튼을 선택해주세요");
+	            return;
+	        }
+	        return gender;
+	    }
+	 function shop_chk() {
+	        //라디오 버튼 Name 가져오기
+	        var radio_btn = document.getElementsByName("shop");
+	 
+	        //라디오 버튼이 체크되었나 확인하기 위한 변수
+	        var radio_btn_check = 0;
+	        for(var i = 0; i<radio_btn.length; i++){
+	            //만약 라디오 버튼이 체크가 되어있다면 true
+	            if(radio_btn[i].checked==true){
+	                //라디오 버튼 값
+	                //alert(radio_btn[i].value);
+	                var shop = radio_btn[i].value;
+	                //라디오 버튼이 체크되면 radio_btn_check를 1로 만들어준다.
+	                radio_btn_check++;
+	            }
+	        }
+	        
+	        if(radio_btn_check==0){
+	            alert("라디오 버튼을 선택해주세요");
+	            return;
+	        }
+	        return shop;
+	    }
+	 function age_chk() {
+	        //라디오 버튼 Name 가져오기
+	        var age_input = document.getElementById("personal_age");
+	        return age_input;
+	    }
+	 function name_chk() {
+	        //라디오 버튼 Name 가져오기
+	        var name_input = document.getElementById("personal_name");
+	 		return name_input;
+	    }
+	 function dong_chk() {
+	        //라디오 버튼 Name 가져오기
+	        var dong_input = document.getElementById("personal_dong");
+	 		return dong_input;
+	    }
+		function show_group(){
+			//D매장-풍덕천동
+			var gender=gender_chk();
+			var age=age_chk().value;
+			var name = name_chk().value;
+			var dong = dong_chk().value;
+			var shop_day = shop_chk();
+			var flag=0;
+			var num=0;
+			if (30<=age&&age<40){
+				if (shop_day=='weekdays'){
+						if (dong!='풍덕천동')	{	//왜냐하면 vip가 대부분 매장위치에 살아
+							var prod_li=new Array('스낵','두부','유정란','김가공');
+							flag=1;
+							num=1;//1번 군집
+						}
+							
+				}
+			}
+			
+			else if (40<=age && age<50){
+				if (shop_day=='weekdays'){
+						if( dong!='풍덕천동')	{	//왜냐하면 vip가 대부분 매장위치에 살아
+							var prod_li=new Array('유정란','스낵','두부');
+							flag=1;
+							num=2;//2번군집
+						}
+						else{			//잠재적 vip
+							var prod_li=new Array('스낵','유정란','두부','김가공');
+							flag=1;
+							num=3;
+						}
+				}
+				else{
+					if (dong!='풍덕천동'	){
+						var prod_li=new Array('두부','스낵','식빵/식사대용','보리살림(냉장)');
+						flag=1;
+						num=4;
+					}
+				}
+			}
+			
+			if (flag==0&&50<=age && age<60){
+				if (shop_day=='weekdays'){
+					if (dong!='풍덕천동')	{
+						var prod_li=new Array('두부','유정란','콩나물','양파');
+						flag=1;
+						num=5;
+					}
+					else{
+						var prod_li=new Array('두부','유정란','우유','보리살림(냉장)');
+						flag=1;
+						num=6;
+					}
+				}
+				else{
+					if (dong=='풍덕천동'){
+						var prod_li=new Array('두부','유정란','우유','콩나물');
+						flag=1;
+						num=7;
+					}
+				}
+			}
+			
+			if(flag==0 && 60<=age && age<70){
+				if (shop_day=='weekdays'){
+					if (dong=='풍덕천동'){
+						var prod_li=new Array('두부','유정란','스낵','콩나물');
+						flag=1;
+						num=8;
+					}
+				}
+			}
+			if (flag==0){
+				var prod_li=new Array('두부','스낵','유정란');
+				num=9;//기타군집
+			}
+			
+			document.getElementById("submit_info").innerText = name+"고객님의 군집은 "+num+"그룹 입니다.";
+			toggleImg(num);
+		}
+	
+		function toggleImg(num) {
+		      document.getElementById("img").src = "../static/images/추천그룹"+String(num)+".jpg";
+		      
+		    }
+		
+		
+		</script>
+		<script>
+		
+		function show_vip_class(){
+			var input_data = new Array(100000, 7, 1);
+			var weight = new Array(67.765, -7.753, 39.482);
+			var norm_purchase = (input_data[0] - 3924.0) / (144489.0 - 3924.0);
+			var norm_distance = (input_data[1] - 2) / (31 - 2);
+			var norm_data = new Array(norm_purchase, norm_distance, input_data[2]);
+			var vip_score = 0.0;
+			for(var i=0;i<3;i++){
+			    vip_score += norm_data[i] * weight[i];
+			}
+			var fl=0;
+
+			if (vip_score >= 38.96992808824485){
+			    var vip_rank = "A등급";
+			    fl=1;
+			}
+			if (vip_score >= 23.092306876681178){
+			    var vip_rank = "B등급";
+			    fl=1;
+			}
+			if (vip_score >= 15.422519701279441){
+			    var vip_rank = "C등급";
+			    fl=1;
+			}
+			if (vip_score >= 9.33286891019862){
+			    var vip_rank = "D등급";
+			    fl=1;
+			}
+			if(fl==0){
+			    var vip_rank = "F등급";
+			}
+			document.getElementById("submit_personal").innerText = "해당 회원의 예상 vip 등급은"+vip_rank+"입니다.";
+			
+		}
+   </script>
+    
+</head>
+<body>
+
+<div id="header-wrapper">
+	
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">동천마켓</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="">main</a></li>
+				<li class="active"><a href="index2.html" accesskey="2" title="">고객관리</a></li>
+				<li><a href="index3.html" accesskey="3" title="">재고관리</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div id="welcome" class="container">
+	  <h2>안녕하세요 관리자님, 신규 고객 정보를 입력해주세요.</h2>
+		
+	</div>
+	<div class="main-block">
+    <form id='personal_form' action="/">
+    <div>
+     찾으려는 고객님 성함을 입력하세요 <input type="text" id="personal_name" name="p_name" value="배강국" required><button type="button" id="username_input">입력</button>
+  </div>
+      <fieldset >
+           
+        <legend>
+          <h3>고객정보</h3>
+        </legend>
+        
+        <div  class="personal-details">
+          <div>
+            <div><label>고객 성함*</label><input type="text" id="personal_name" name="name"  required></div>
+            <div><label>고객 연령*</label><input type="text" id="personal_age" name="personal_age" required></div>
+            <div><label>고객 거주지(구)</label><input type="text" id="gu" name="gu"></div>
+            <div><label>고객 거주지(동)*</label><input type="text" id="personal_dong" name="dong" required></div>
+            
+          </div>
+          <div>
+            <div>
+              <div>
+                                 성별  <input type="radio" value="female" id="female" name="gender" required/>여<input type="radio" value="none" id="male" name="gender" active="clicked" required/>남
+             </div>
+             <div>
+              	모바일알람 <input type="radio" value="none" id="yes" name="alarm" required/>Y<input type="radio" value="none" id="no" name="alarm" required/>N
+             </div> 
+             <div>
+              	배송서비스<input type="radio" value="y" id="y" name="delievery" required/>Y<input type="radio" value="n" id="n" name="delievery" required/>N
+             </div> 
+            <div>
+      			언제 주로 쇼핑하시나요?<input type="radio" value="weekdays" id="weekdays" name="shop" required/>주중<input type="radio" value="weekend" id="weekend" name="shop" required/>주말
+            </div> 
+            </div>
+           </div>
+          <button id='submit_info' type="button" onclick='show_group();'>고객 군 분류 결과 출력</button>
+          <div class="prod_li">
+      		<img id="img" src="../static/images/초록.jpg" />
+    	  </div>
+        </div>
+      </fieldset>
+      </form>
+      <form id='large_prod'>
+      <fieldset >
+        <legend>
+          <h3>최초3회 구매내역 중 대분류별 비중 입력</h3>
+        </legend>
+        <div class="product-details">
+          <div >
+            <div><label>축산 &nbsp;:</label><input type="text" name="chucksan" />&nbsp;&nbsp;&nbsp;<label>생활용품&nbsp;:</label><input type="text" name="sanghwal" >&nbsp;</div>
+            <div><label>반찬&nbsp;:</label><input type="text" name="banchan">&nbsp;&nbsp;&nbsp;<label>수산&nbsp;:</label><input type="text" name="susan" >&nbsp;</div>
+            <div><label>채소&nbsp;:</label><input type="text" name="chaeso" >&nbsp;&nbsp;&nbsp;<label>서류&nbsp;:</label><input type="text" name="seolyu" >&nbsp;</div>
+            <div><label>주곡&nbsp;:</label><input type="text" name="jugok" >&nbsp;&nbsp;&nbsp;<label>잡곡&nbsp;:</label><input type="text" name="jobgok" >&nbsp;</div>
+            <div><label>양념/가루&nbsp;:</label><input type="text" name="yangnyum" >&nbsp;&nbsp;&nbsp;<label>주류&nbsp;:</label><input type="text" name="julyu" >&nbsp;</div>
+            <div><label>음료&nbsp;:</label><input type="text" name="umlyo" >&nbsp;&nbsp;&nbsp;<label>간식&nbsp;:</label><input type="text" name="gansik" >&nbsp;</div>
+            <div><label>과실&nbsp;:</label><input type="text" name="fruit" >&nbsp;&nbsp;&nbsp;<label>건강&nbsp;:</label><input type="text" name="health" >&nbsp;</div>
+            <div><label>기타&nbsp;:</label><input type="text" name="etc" >&nbsp;&nbsp;&nbsp;</div>
+                        
+        </div>
+       </div>
+      </fieldset>
+      <fieldset>
+       
+          <legend>
+          <h3>최초3회 구매 정보</h3>
+        </legend>
+        <div  class="personal-details">
+          <div>
+            <div><label>평균구매물품수</label><input type="text" id="count" name="count"></div>
+            <div><label>평균 구매 주기</label><input type="text" id="time" name="time"></div>
+            <div><label>구매건수</label><input type="text" id="numb" name="numb"></div>
+            </div>
+            </div>
+          
+      </fieldset>
+      <fieldset>
+     
+        <legend>
+          <h3>구매 패턴 분석 후 매출 신장 예측</h3>
+        </legend>
+        <div  class="personal-details">
+          <div>
+            <div><label>월평균예상구매금액</label><input type="text" id="personal_money" value="대분류 비중으로 예측모델이 값을 도출합니다." name="personal_money" required></div>
+            <div><label>고객의 거주지(동)</label><input type="text" id="personal_distance" name="personal_distance" required></div>
+            <div><label>모바일알람(Yes/No))</label><input type="text" id="mobile" name="mobile"></div>
+          </div>
+          
+          <div>
+      </fieldset>
+      <button type="button" id="submit_personal" onclick="show_vip_class();">VIP등급예측하기</button>
+    </form>
+    </div> 
+	<div id="portfolio" class="container">
+	</div>
+	</div>
+<div id="footer">
+	<div class="container">
+		<div class="fbox1">
+		<span class="icon icon-map-marker"></span>
+			<span>1234 Fictional Road Suite #789
+			<br />Nashville TN 00000</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-phone"></span>
+			<span>
+				Telephone: +1 800 123 4657
+			</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-envelope"></span>
+			<span>businessname@business.com</span>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Photos by <a href="/">DongChun</a> | Design by <a href="/">B반1조최고</a>.</p>
+	<ul class="contact">
+		<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+		<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+		<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+		<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+	</ul>
+</div>
+</body>
+</html>
