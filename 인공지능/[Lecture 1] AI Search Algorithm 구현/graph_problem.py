@@ -17,7 +17,7 @@ class GraphProblem(util.SearchProblem):
     def succ_and_cost(self, state):
         results = []
         for (prev_state, next_state), cost in distances.items():
-            if _FILL_IN_:
+            if prev_state == state:
                 action = state +'->'+next_state
                 results.append((action, next_state, cost))
         return results
@@ -48,6 +48,7 @@ if __name__ == '__main__':
     # # dps = dynamic_programming_search.DynamicProgrammingSearch(memory_use=False, verbose=1)
     # print(dps.solve(problem))
 
+    #ucs 최소의 cost를 구해서 최적의 path 찾아줌
     import uniform_cost_search
     ucs = uniform_cost_search.UniformCostSearch(verbose=3)
     print(ucs.solve(problem))

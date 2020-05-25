@@ -92,13 +92,13 @@ class BlackjackMDP(util.MDP):
 
             # get_succ_reward(idx) returns a successor state and a reward, when a card is taken.
             def get_succ_reward(idx):
-                new_card_sum = _FILL_IN_  # HINT: use self.cardValues  # what's the new sum of card values, when we take a new card?
+                new_card_sum = card_sum + self.cardValues[idx]  # HINT: use self.cardValues  # what's the new sum of card values, when we take a new card?
                 if new_card_sum > self.threshold:  # when the card sum exceeds the threshold
                     new_deck = None
                     reward = 0
                 elif num_all_cards > 1:  # sum(new_deck) > 0; when some cards remain
                     new_deck = list(deck)
-                    _FILL_IN_  # decrease the number of instances of the taken card.
+                    new_deck[idx]-=1  # decrease the number of instances of the taken card.
                     new_deck = tuple(new_deck)
                     reward = 0
                 else:  # when there is no card remaining
@@ -117,7 +117,7 @@ class BlackjackMDP(util.MDP):
                     if num == 0:
                         continue                        
                     succ, reward = get_succ_reward(idx)
-                    prob = _FILL_IN_
+                    prob = num/sum(deck)
                     succ_prob_reward_list.append((succ, prob, reward))
 
         # Peek implementation ----------------------------------------
@@ -128,8 +128,8 @@ class BlackjackMDP(util.MDP):
                 for idx, num in enumerate(deck):
                     if num == 0:
                         continue
-                    prob = _FILL_IN_
-                    succ_prob_reward_list.append((_FILL_IN_, prob, - self.peekCost))  # HINT: has the form (new_card_sum, new_peek_idx, new_deck)
+                    prob = num/sum(deck)
+                    succ_prob_reward_list.append(((card_sum,idx,deck), prob, - self.peekCost))  # HINT: has the form (new_card_sum, new_peek_idx, new_deck)
         # ---------------------------------------- Peek implementation
 
         elif action == 'Quit':
@@ -195,10 +195,10 @@ class QLearningAlgorithm(util.RLAlgorithm):
             v_opt = 0
         else:
             v_opt = max(self.getQ(newState, a) for a in self.actions(newState))  # v_opt(s')
-        diff = _FILL_IN_  # HINT: use self.getQ and self.discount
+        diff = self.getQ(state, action)-(reward+self.discount*v_opt)  # HINT: use self.getQ and self.discount
         for f, v in self.featureExtractor(state, action):
             eta = self.getStepSize()
-            self.weights[f] -= _FILL_IN_
+            self.weights[f] -= eta*diff*v
         # END_YOUR_CODE
 
 # Return a singleton list containing indicator feature for the (state, action)

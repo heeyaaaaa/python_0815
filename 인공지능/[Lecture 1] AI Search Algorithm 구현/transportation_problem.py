@@ -18,16 +18,16 @@ class TransportationProblem(util.SearchProblem):
         
         # Walk action
         if (state + 1) <= self.end_state:
-            next_state = _FILL_IN_
+            next_state = state + 1
             action = 'Walk'
-            cost = _FILL_IN_
+            cost = 1
             results.append((action, next_state, cost))
             
         # Tram action
         if (2 * state) <= self.end_state:
-            next_state = _FILL_IN_
+            next_state = 2 * state
             action = 'Tram'
-            cost = _FILL_IN_
+            cost = 2
             results.append((action, next_state, cost))
             
         return results

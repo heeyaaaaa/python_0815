@@ -65,65 +65,65 @@ def main():
             print('- true answer =', answer)
             print('- your answer = ', mdp.succAndProbReward(state, action))
 
-        print('\n---------- Test c3 ----------')
-        algorithm = ValueIteration()
-        algorithm.solve(mdp1, verbose=True)
-        for s in algorithm.V:
-            print('V(%s) = %f'%(s, algorithm.V[s]))
-        print('------------')
-        for s in algorithm.pi:
-            print('pi(%s) = %s'%(s, algorithm.pi[s]))
-        print('------------')
-        print('Q1 (6, None, (1, 1) => %s'%(algorithm.pi[(6, None, (1, 1))]))
-        print('Q2 (6, 0, (1, 1) => %s'%(algorithm.pi[(6, 0, (1, 1))]))
+    #     print('\n---------- Test c3 ----------')
+    #     algorithm = ValueIteration()
+    #     algorithm.solve(mdp1, verbose=True)
+    #     for s in algorithm.V:
+    #         print('V(%s) = %f'%(s, algorithm.V[s]))
+    #     print('------------')
+    #     for s in algorithm.pi:
+    #         print('pi(%s) = %s'%(s, algorithm.pi[s]))
+    #     print('------------')
+    #     print('Q1 (6, None, (1, 1) => %s'%(algorithm.pi[(6, None, (1, 1))]))
+    #     print('Q2 (6, 0, (1, 1) => %s'%(algorithm.pi[(6, 0, (1, 1))]))
 
-        print('\n========== Problem D ==========')
-        mdp = util.NumberLineMDP()
-        rl = QLearningAlgorithm(mdp.actions, mdp.discount(), identityFeatureExtractor, 0)
+    #     print('\n========== Problem D ==========')
+    #     mdp = util.NumberLineMDP()
+    #     rl = QLearningAlgorithm(mdp.actions, mdp.discount(), identityFeatureExtractor, 0)
 
-        # We call this here so that the stepSize will be 1
-        rl.numIters = 1
+    #     # We call this here so that the stepSize will be 1
+    #     rl.numIters = 1
 
-        rl.incorporateFeedback(0, 1, 0, 1)
-        print('Q-value for (state = 0, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, -1)))
-        print('Q-value for (state = 0, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, 1)))
+    #     rl.incorporateFeedback(0, 1, 0, 1)
+    #     print('Q-value for (state = 0, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, -1)))
+    #     print('Q-value for (state = 0, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, 1)))
 
-        rl.incorporateFeedback(1, 1, 1, 2)
-        print('Q-value for (state = 0, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, -1)))
-        print('Q-value for (state = 0, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, 1)))
-        print('Q-value for (state = 1, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(1, -1)))
-        print('Q-value for (state = 1, action =  1) : Answer %.1f, Output %.1f'%(1, rl.getQ(1, 1)))
+    #     rl.incorporateFeedback(1, 1, 1, 2)
+    #     print('Q-value for (state = 0, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, -1)))
+    #     print('Q-value for (state = 0, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(0, 1)))
+    #     print('Q-value for (state = 1, action = -1) : Answer %.1f, Output %.1f'%(0, rl.getQ(1, -1)))
+    #     print('Q-value for (state = 1, action =  1) : Answer %.1f, Output %.1f'%(1, rl.getQ(1, 1)))
 
-        rl.incorporateFeedback(2, -1, 1, 1)
-        print('Q-value for (state = 2, action = -1) : Answer %.1f, Output %.1f'%(1.9, rl.getQ(2, -1)))
-        print('Q-value for (state = 2, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(2, 1)))
+    #     rl.incorporateFeedback(2, -1, 1, 1)
+    #     print('Q-value for (state = 2, action = -1) : Answer %.1f, Output %.1f'%(1.9, rl.getQ(2, -1)))
+    #     print('Q-value for (state = 2, action =  1) : Answer %.1f, Output %.1f'%(0, rl.getQ(2, 1)))
 
-        print('\n========== Problem E ==========')
-        # Small test case
-        smallMDP = BlackjackMDP(cardValues=[1, 5], multiplicity=2, threshold=10, peekCost=1)
-        compareQLandVI(smallMDP, identityFeatureExtractor)
+    #     print('\n========== Problem E ==========')
+    #     # Small test case
+    #     smallMDP = BlackjackMDP(cardValues=[1, 5], multiplicity=2, threshold=10, peekCost=1)
+    #     compareQLandVI(smallMDP, identityFeatureExtractor)
 
-        # Large test case
-        largeMDP = BlackjackMDP(cardValues=[1, 3, 5, 8, 10], multiplicity=3, threshold=40, peekCost=1)
-        compareQLandVI(largeMDP, identityFeatureExtractor)
-        print('\n========== Problem F ==========')
+    #     # Large test case
+    #     largeMDP = BlackjackMDP(cardValues=[1, 3, 5, 8, 10], multiplicity=3, threshold=40, peekCost=1)
+    #     compareQLandVI(largeMDP, identityFeatureExtractor)
+    #     print('\n========== Problem F ==========')
 
-        mdp = BlackjackMDP(cardValues=[1, 5], multiplicity=2, threshold=10, peekCost=1)
-        rl = QLearningAlgorithm(mdp.actions, mdp.discount(), blackjackFeatureExtractor, 0)
+    #     mdp = BlackjackMDP(cardValues=[1, 5], multiplicity=2, threshold=10, peekCost=1)
+    #     rl = QLearningAlgorithm(mdp.actions, mdp.discount(), blackjackFeatureExtractor, 0)
 
-        # We call this here so that the stepSize will be 1
-        rl.numIters = 1
+    #     # We call this here so that the stepSize will be 1
+    #     rl.numIters = 1
 
-        rl.incorporateFeedback((7, None, (0, 1)), 'Quit', 7, (7, None, None))
-        print("Q-value for (state = (7, None, (0, 1)), action = 'Quit') : Answer %.1f, Output %.1f"%(28, rl.getQ((7, None, (0, 1)), 'Quit')))
-        print("Q-value for (state = (7, None, (1, 0)), action = 'Quit') : Answer %.1f, Output %.1f"%(7, rl.getQ((7, None, (1, 0)), 'Quit')))
-        print("Q-value for (state = (2, None, (0, 2)), action = 'Quit') : Answer %.1f, Output %.1f"%(14, rl.getQ((2, None, (0, 2)), 'Quit')))
-        print("Q-value for (state = (2, None, (0, 2)), action = 'Take') : Answer %.1f, Output %.1f"%(0, rl.getQ((2, None, (0, 2)), 'Take')))
+    #     rl.incorporateFeedback((7, None, (0, 1)), 'Quit', 7, (7, None, None))
+    #     print("Q-value for (state = (7, None, (0, 1)), action = 'Quit') : Answer %.1f, Output %.1f"%(28, rl.getQ((7, None, (0, 1)), 'Quit')))
+    #     print("Q-value for (state = (7, None, (1, 0)), action = 'Quit') : Answer %.1f, Output %.1f"%(7, rl.getQ((7, None, (1, 0)), 'Quit')))
+    #     print("Q-value for (state = (2, None, (0, 2)), action = 'Quit') : Answer %.1f, Output %.1f"%(14, rl.getQ((2, None, (0, 2)), 'Quit')))
+    #     print("Q-value for (state = (2, None, (0, 2)), action = 'Take') : Answer %.1f, Output %.1f"%(0, rl.getQ((2, None, (0, 2)), 'Take')))
 
-        # Large test case
-        largeMDP = BlackjackMDP(cardValues=[1, 3, 5, 8, 10], multiplicity=3, threshold=40, peekCost=1)
-        # random.seed(0)
-        compareQLandVI(largeMDP, blackjackFeatureExtractor)  # 591/2745 = 0.215301% different states (when random.seed(0))
+    #     # Large test case
+    #     largeMDP = BlackjackMDP(cardValues=[1, 3, 5, 8, 10], multiplicity=3, threshold=40, peekCost=1)
+    #     # random.seed(0)
+    #     compareQLandVI(largeMDP, blackjackFeatureExtractor)  # 591/2745 = 0.215301% different states (when random.seed(0))
 
     except NotImplementedError as err:
         # print err

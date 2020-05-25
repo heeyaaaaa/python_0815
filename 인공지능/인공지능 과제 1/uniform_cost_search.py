@@ -47,7 +47,7 @@ class UniformCostSearch(util.SearchAlgorithm):
                     print("  Action %s => %s with cost %s + %s" % (action, newState, priority, cost))
                 if newState not in explored:
                     # Found better way to go to |newState|, update backpointer.
-                    new_priority = priority + cost #priority가 이때까지의 cost
+                    new_priority = priority + cost
                     is_updated = frontier.update(newState, new_priority)
                     if is_updated:
                         backpointers[newState] = (action, state)

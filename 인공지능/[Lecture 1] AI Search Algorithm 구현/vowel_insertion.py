@@ -7,6 +7,7 @@ class VowelInsertionProblem(util.SearchProblem):
         self.queryWords = queryWords
         self.bigramCost = bigramCost
         self.possibleFills = possibleFills
+        # corpus안에 있는 단어 리스트를 반환
 
     def start_state(self):
         return 0, wordsegUtil.SENTENCE_BEGIN  # word position & previous reconstructed word
@@ -27,7 +28,7 @@ class VowelInsertionProblem(util.SearchProblem):
 if __name__ == '__main__':    
     unigramCost, bigramCost = wordsegUtil.makeLanguageModels('leo-will.txt')
     possibleFills = wordsegUtil.makeInverseRemovalDictionary('leo-will.txt', 'aeiou')
-    problem = VowelInsertionProblem('thts m n th crnr'.split(), bigramCost, possibleFills)
+    problem = VowelInsertionProblem('hll thr'.split(), bigramCost, possibleFills)
     # problem = VowelInsertionProblem([wordsegUtil.removeAll(word, 'aeiou') for word in 'whats up'.split()], bigramCost, possibleFills)
 
     # import dynamic_programming_search
@@ -38,7 +39,8 @@ if __name__ == '__main__':
     import uniform_cost_search
     ucs = uniform_cost_search.UniformCostSearch(verbose=0)
     print(ucs.solve(problem))
-
+#(['thats', 'me', 'in', 'the', 'corner'], 46.78710900438204, 40)
+# sentence, cost, 방문한 노드의 수
 
 # === Other Examples ===
 # 

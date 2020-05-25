@@ -15,11 +15,12 @@ class SegmentationProblem(util.SearchProblem):
 
     def succ_and_cost(self, state):
         for step in range(1, len(self.query) - state + 1):
+            #step : 현재 state에서 알파벳의 갯수
             next_state = state + step
             word = self.query[state: next_state]
             cost = self.unigramCost(word)
             yield word, next_state, cost  # action, next_state, cost
-
+#yeild : 리스트에 추가하는 함수
 
 if __name__ == '__main__':
     unigramCost, bigramCost = wordsegUtil.makeLanguageModels('leo-will.txt')
